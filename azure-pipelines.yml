@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, Unity Small Finance!
+  displayName: 'Run a simple Test in DevOps Test Hub'
+
+- task: OTSTask@3
+  inputs:
+    OTSService: 'DevOps TestHub'
+    teamspace: 'B2C'
+    project: 'UnitySmallFinance'
+    branch: 'main'
+    repo: 'https://devopsloopdemoenv.hcl-software.com/control/B2C/UnitySmallFinance.git'
+    filePath: 'Unity Small Finance Bank/Test 1.dtx.yaml'
