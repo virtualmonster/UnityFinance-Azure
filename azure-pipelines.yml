@@ -25,4 +25,4 @@ steps:
     patToken: '$(PATToken)'
     testPlanName: 'Test Plan 1'
     testCaseName: 'Test Case 1'
-    exportReport: '/TestReport.xml'
+    exportReport: '$(Agent.TempDirectory)/TestReport.xml'
