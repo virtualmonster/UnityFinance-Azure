@@ -26,3 +26,11 @@ steps:
     testPlanName: 'Test Plan 1'
     testCaseName: 'Test Case 1'
     exportReport: '$(Agent.TempDirectory)/TestReport.xml'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TestReport.xml'
+    searchFolder: '$(Agent.TempDirectory)'
+    failTaskOnFailedTests: true
+    failTaskOnFailureToPublishResults: true
+    failTaskOnMissingResultsFile: true
