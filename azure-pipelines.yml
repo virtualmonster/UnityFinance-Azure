@@ -21,3 +21,8 @@ steps:
     branch: 'main'
     repo: 'https://devopsloopdemoenv.hcl-software.com/control/B2C/UnitySmallFinance.git'
     filePath: 'Unity Small Finance Bank/Test 1.dtx.yaml'
+    azureServer: 'https://dev.azure.com/stuartwalker0167/Unity%20Finance%20Demo'
+    patToken: '$(PATToken)'
+    testPlanName: 'Test Plan 1'
+    testCaseName: 'Test Case 1'
+    exportReport: '/TestReport.xml'
